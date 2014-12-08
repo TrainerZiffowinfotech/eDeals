@@ -1,0 +1,8 @@
+rootProject.name = 'eDeals'
+
+include 'eDeals-application'
+include 'eDeals-api'
+include 'eDeals-core'
+
+//include 'MyBatisGenerator'
+

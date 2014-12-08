@@ -1,0 +1,25 @@
+version: 1
+server:
+  applicationConnectors:
+  - type: http
+    port: 16001
+  adminConnectors:
+  - type: http
+    port: 16002
+
+# Logging settings.
+logging:
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+  # Logger-specific levels.
+  loggers:
+    # Overrides the level of com.perspective.scheduler and sets it to DEBUG.
+    com.perspective: DEBUG
+  appenders:
+  - type: console
+  - type: file
+    currentLogFilename: /tmp/eDealsapplication.log
+    archive: true
+    archivedLogFilenamePattern: /tmp/eDealsapplication-%d.log
+    archivedFileCount: 5
+
